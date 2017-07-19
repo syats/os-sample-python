@@ -7,7 +7,7 @@ def hello():
     greeting = "Hello From Within Openshift \n "
     greeting += os.environ["TEST_ENV"]
 
-    config_file = "/configFiles/my-config-file"
+    config_file = "/sample/my-config-file.txt"
     f = open(config_file,"rt")
     config_string = f.read()
     greeting += config_string.strip()
