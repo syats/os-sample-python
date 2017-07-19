@@ -10,8 +10,8 @@ def hello():
     return greeting
 
 @application.route("/activate")
-def hello():
-    greeting = "Activation Route"    
+def activation():
+    greeting = "Activation Of Second Pod"
     print(greeting)
     return greeting
 
