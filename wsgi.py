@@ -4,8 +4,14 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    greeting = "Hello"
-    greeting += os.environ["TEST_ENV"]
+    greeting = "Hello From Within Openshift"
+    #greeting += os.environ["TEST_ENV"]
+    print(greeting)
+    return greeting
+
+@application.route("/activate")
+def hello():
+    greeting = "Activation Route"    
     print(greeting)
     return greeting
 
