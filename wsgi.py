@@ -5,15 +5,11 @@ application = Flask(__name__)
 @application.route("/")
 def hello():
     greeting = "Hello From Within Openshift"
-    #greeting += os.environ["TEST_ENV"]
+    greeting += os.environ["TEST_ENV"]
     print(greeting)
     return greeting
 
-@application.route("/activate")
-def activation():
-    greeting = "Activation Of Second Pod"
-    print(greeting)
-    return greeting
+
 
 if __name__ == "__main__":
     application.run()
