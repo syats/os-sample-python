@@ -5,7 +5,7 @@ application = Flask(__name__)
 @application.route("/")
 def hello():
     greeting = "Hello From Within Openshift \n "
-    #greeting += os.environ["TEST_ENV"]
+    greeting += os.environ["TEST_ENV"]
 
     # config_file = "/configFiles/my-config-file"
     # f = open(config_file,"rt")
