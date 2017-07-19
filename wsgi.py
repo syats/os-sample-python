@@ -5,7 +5,7 @@ application = Flask(__name__)
 @application.route("/")
 def hello():
     greeting = "Hello From Within Openshift"
-    greeting += os.environ["TEST_ENV"]
+    #greeting += os.environ["TEST_ENV"]
     print(greeting)
     return greeting
 
